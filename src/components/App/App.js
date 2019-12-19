@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import Olympics from '../../util/Olympics';
 import CountryDetails from '../CountryDetails/CountryDetails';
 import SearchBar from '../SearchBar/SearchBar';
@@ -28,9 +27,21 @@ searchDatabase(country) {
 render() {
   return (
     <div className="App">
-    <h1><a href='https://www.vladcancode.com'>vladcancode.com</a></h1>
+
+    <h1 id='banner'><a href='https://www.vladcancode.com'>vladcancode.com</a></h1>
+
+    <div className="logo">
+    <div className="img-container">
+    <img src={require('./logo.png')} alt='logo'/>
+    </div>
+    <h1 id='title'>Gold Medal Count</h1>
+    </div>
+
+    <div className="container">
     <SearchBar searchDatabase={this.searchDatabase}/>
     <CountryDetails details={this.state.countryDetails}/>
+    </div>
+
     </div>
   );
 }

@@ -1,37 +1,9 @@
 import React from 'react';
-import Olympics from '../../util/Olympics';
 import '../../css/App.css';
+import Olympics from '../../util/Olympics';
+
 
 class CountryDetails extends React.Component {
-  /*constructor(props) {
-    super(props);
-    this.state = {
-
-      countryDetails: {
-        'name': '-',
-        'numberMedals': '-',
-        'bestSummer': '-',
-        'bestYear': '-',
-        'bestWinter': '-',
-        'bestDiscipline': '-',
-        'gdp': '-',
-        'population': '-',
-        'bestSport': '-',
-        'bestEvent': '-',
-        'mostMedalsAthlete': '-',
-        'femaleMedalists': '-',
-        'maleMedalists': '-'
-      }
-    };
-  }*/
-
-  /*componentDidMount() {
-    Olympics.search(this.state.countryDetails.name).then(countryDetails => {
-      if(Object.keys(countryDetails).length) {
-        this.setState({countryDetails: countryDetails});
-      }
-    });
-  }*/
 
   render() {
     return (

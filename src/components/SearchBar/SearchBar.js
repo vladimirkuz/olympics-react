@@ -29,7 +29,6 @@ class SearchBar extends React.Component {
         <div id="search">
           <form onSubmit={this.handleSubmit}>
             <div id="country-search">
-              <img id="magnifying-glass" alt="Search" src='img/magnify.svg' />
               <input type="text" id="country-search-input" placeholder="Search for a country" onChange={this.handleChange} />
             </div>
             <input type="submit" value="SEARCH" id="country-search-button" />
