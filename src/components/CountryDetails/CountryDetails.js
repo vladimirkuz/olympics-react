@@ -5,14 +5,24 @@ import Olympics from '../../util/Olympics';
 
 class CountryDetails extends React.Component {
 
+  subHeader() {
+    if (this.props.details === undefined){
+      return 'Server down';
+    }else if (this.props.details.population === '-') {
+      return 'Not valid country name'
+    }else{
+      return this.props.details.name;
+    }
+  }
+
   render() {
     return (
       <div>
-      <h2 className="subheader">{this.props.details.name}</h2>
+      <h2 className="subheader">{this.subHeader()}</h2>
       <table id="country-detail-table">
         <tbody>
         <tr>
-          <td className="table-descriptor">GROSS DOMESTIC PRODUCT</td>
+          <td className="table-descriptor">GDP/CAPITA</td>
           <td className="table-descriptor"># OF GOLD MEDALS</td>
           <td className="table-descriptor">POPULATION</td>
         </tr>
